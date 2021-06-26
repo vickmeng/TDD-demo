@@ -1,5 +1,5 @@
 /**
- * 绿
+ * 红 来了个新需求
  */
 const {isEqual} = require('./isEqual')
 
@@ -67,6 +67,11 @@ describe('isEqual',function (){
         expect(isEqual({a:1}, {a:1,b:1})).toBe(false)
 
         expect(isEqual({a:{b:1}}, {a:{b:2}})).toBe(false)
+      });
+
+      it('date', function () {
+        expect(isEqual(new Date('2021/1/1'), new Date('2021/1/1'))).toBe(true)
+        expect(isEqual(new Date('2021/1/1'), new Date('2021/1/2'))).toBe(false)
       });
     });
 
