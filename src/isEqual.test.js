@@ -1,5 +1,5 @@
 /**
- * 依然绿
+ * 红
  */
 const {isEqual} = require('./isEqual')
 
@@ -19,6 +19,8 @@ describe('isEqual',function (){
     it('基本类型', function () {
       expect(isEqual(1,1)).toBe(true)
       expect(isEqual(1,2)).toBe(false)
+
+      expect(isEqual(NaN,NaN)).toBe(true)
 
       expect(isEqual('a','a')).toBe(true)
       expect(isEqual('a','b')).toBe(false)
