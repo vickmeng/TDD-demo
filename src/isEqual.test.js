@@ -1,5 +1,5 @@
 /**
- * 红
+ * 绿
  */
 const {isEqual} = require('./isEqual')
 
@@ -58,8 +58,6 @@ describe('isEqual',function (){
 
         expect(isEqual({a:{b:1}}, {a:{b:2}})).toBe(false)
       });
-
-
     });
 
   })
