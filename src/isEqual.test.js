@@ -1,6 +1,6 @@
 /**
- * 红色
- * 未实现功能，预先设计测试用例，引导代码实现
+ * 绿色
+ * 实现功能
  */
 const {isEqual} = require('./isEqual')
 
@@ -32,10 +32,6 @@ describe('isEqual',function (){
 
       expect(isEqual(null,null)).toBe(true)
       expect(isEqual(null,'')).toBe(false)
-      /**
-       * 不知道Symbol 怎么处理？？？ 去问pm。
-       * 得到答案，同步qa，写下测试用例，以免回头pm赖账
-        */
 
       expect(isEqual(Symbol(1),Symbol(1))).toBe(false)
 

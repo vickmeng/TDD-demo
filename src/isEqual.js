@@ -1,8 +1,9 @@
 function isEqual(value ,other) {
-  /**
-   * 没有实现的返回 undefined | false | null
-   * 知之为知之，不知为不知=
-   */
+  if (value === other) return true
+
+
+  if (Object.prototype.toString.call(value) !== Object.prototype.toString.call(other) ) return false;
+
   return false
 }
 
