@@ -1,0 +1,40 @@
+Arguments: 
+  /usr/local/Cellar/nvm/0.38.0/versions/node/v15.14.0/bin/node /usr/local/opt/nvm/versions/node/v15.14.0/bin/yarn
+
+PATH: 
+  /usr/local/opt/nvm/versions/node/v15.14.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/mengweikang/Desktop/tdd/node_modules/.bin
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  15.14.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: connect ECONNREFUSED 127.0.0.1:80
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1138:16)
+
+npm manifest: 
+  {
+    "name": "tdd-demo",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "jest"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+      "jest": "^27.0.5"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
