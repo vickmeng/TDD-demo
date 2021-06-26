@@ -2,14 +2,6 @@ function getType(value) {
   return Object.prototype.toString.call(value);
 }
 
-/**
- * 提交QA
- */
-
-/**
- * 继续重构
- * 抽出 isEqualObject
- */
 function isEqualObject(value ,other) {
   // 略加考虑，保留这两行重复代码不进行抽象，提高阅读流畅性
   if (value === other) return true
@@ -27,7 +19,10 @@ function isEqualObject(value ,other) {
 }
 
 function isEqual(value ,other) {
-  if (value === other) return true
+  /**
+   * 修复 bug，不怕引发新bug
+   */
+  if (Object.is(value ,other)) return true
 
   if (getType(value) !== getType(other)) return false;
 
