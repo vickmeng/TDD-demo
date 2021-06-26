@@ -1,8 +1,15 @@
+function getType(value) {
+  /**
+   * 这方法也是被测绘覆盖过的
+   */
+  return Object.prototype.toString.call(value);
+}
+
 function isEqual(value ,other) {
   if (value === other) return true
 
 
-  if (Object.prototype.toString.call(value) !== Object.prototype.toString.call(other) ) return false;
+  if (getType(value) !== getType(other)) return false;
 
   return false
 }

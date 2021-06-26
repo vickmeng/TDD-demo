@@ -1,5 +1,5 @@
 /**
- * 绿色
+ * 重构 保持绿色，如果红了，就是改代码改出bug了
  * 实现功能
  */
 const {isEqual} = require('./isEqual')
