@@ -17,7 +17,8 @@ function isEqual(value ,other) {
       case '[object Object]':
         if (Object.keys(value).length !== Object.keys(other).length) return false
         return Object.keys(value).every( key => isEqual(value[key], other[key]))
-
+      default:
+        return false
     }
   }
 
