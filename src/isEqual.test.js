@@ -1,5 +1,5 @@
 /**
- * 测引用类型，又红了
+ * 绿
  */
 const {isEqual} = require('./isEqual')
 
