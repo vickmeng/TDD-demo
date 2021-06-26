@@ -1,5 +1,5 @@
 /**
- * 绿
+ * 依然绿
  */
 const {isEqual} = require('./isEqual')
 
