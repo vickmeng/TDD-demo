@@ -1,5 +1,5 @@
 /**
- * 绿
+ * 红
  */
 const {isEqual} = require('./isEqual')
 
@@ -45,6 +45,18 @@ describe('isEqual',function (){
         expect(isEqual(['a'], ['b'])).toBe(false)
         // 超集
         expect(isEqual(['a'], ['a', 'b'])).toBe(false)
+      });
+
+      it('object', function () {
+        expect(isEqual({a:1}, {a:1})).toBe(true)
+
+        expect(isEqual({a:{b:1}}, {a:{b:1}})).toBe(true)
+
+        expect(isEqual({a:1}, {a:2})).toBe(false)
+
+        expect(isEqual({a:1}, {a:1,b:1})).toBe(false)
+
+        expect(isEqual({a:{b:1}}, {a:{b:2}})).toBe(false)
       });
 
 
