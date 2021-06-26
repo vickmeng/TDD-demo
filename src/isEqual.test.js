@@ -1,6 +1,5 @@
 /**
- * 重构 保持绿色，如果红了，就是改代码改出bug了
- * 实现功能
+ * 测引用类型，又红了
  */
 const {isEqual} = require('./isEqual')
 
@@ -37,11 +36,17 @@ describe('isEqual',function (){
 
     });
 
-    it('引用类型', function () {
-      /**
-       * TODO
-       * 太复杂了，先做最小实现
-        */
+    describe('引用类型', function () {
+      it('array', function () {
+        expect(isEqual(['a'], ['a'])).toBe(true)
+        // 多微数组
+        expect(isEqual([['a']], [['a']])).toBe(true)
+
+        expect(isEqual(['a'], ['b'])).toBe(false)
+        // 超集
+        expect(isEqual(['a'], ['a', 'b'])).toBe(false)
+      });
+
 
     });
 
