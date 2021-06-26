@@ -21,6 +21,14 @@ describe('isEqual',function (){
       expect(isEqual(1,2)).toBe(false)
 
       expect(isEqual(NaN,NaN)).toBe(true)
+      expect(isEqual(-0,0)).toBe(false)
+      expect(isEqual(Infinity,Infinity)).toBe(true)
+      expect(isEqual(Number.MIN_VALUE,Number.MIN_VALUE)).toBe(true)
+      expect(isEqual(Number.MAX_VALUE,Number.MAX_VALUE)).toBe(true)
+      expect(isEqual(Number.MIN_SAFE_INTEGER,Number.MIN_SAFE_INTEGER)).toBe(true)
+      expect(isEqual(Number.MAX_SAFE_INTEGER,Number.MAX_SAFE_INTEGER)).toBe(true)
+
+
 
       expect(isEqual('a','a')).toBe(true)
       expect(isEqual('a','b')).toBe(false)
